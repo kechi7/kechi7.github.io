@@ -10,3 +10,8 @@ html {
     margin: 0;
     font-size: 14pt;
   }
+
+  bio1{
+    display:flex;
+    
+  }

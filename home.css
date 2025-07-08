@@ -21,7 +21,7 @@ html {
 /* /////////////////////////////PARALAX///////////////////////////////////////////// */
    /* Parallax section */
    .parallax {
-    background-image: url("/Users/nkechi7/Documents/GitHub/kechi7.github.io/logo.png");
+    background-image: url("/Users/nkechi7/Documents/GitHub/kechi7.github.io/purpleTrainGif");
     min-height: 800px;
     background-attachment: fixed;
     background-position: center;
@@ -283,4 +283,4 @@ div.scroll-container {
 
 
 /* ////////////////////////FOOTER //////////////////// */
-
+ 

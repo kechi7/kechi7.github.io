@@ -5,22 +5,74 @@ html {
     scroll-behavior: smooth;
   }
   
+  /* Body with white background */
   body {
-    padding: 0;
     margin: 0;
-    font-size: 14pt;
-  }
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #E6E6FA;
+    
+}
 
   bio1{
     display:flex;
 
   }
 /* /////////////////////////////PARALAX///////////////////////////////////////////// */
+   /* Parallax section */
+   .parallax {
+    background-image: url("/Users/nkechi7/Documents/GitHub/kechi7.github.io/logo.png");
+    min-height: 800px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-  /* DEMO-SPECIFIC STYLES */
+/* Overlay for better text readability */
+.parallax::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Text overlay container */
+.parallax-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    max-width: 800px;
+}
+
+/* Main title */
+.parallax-title {
+    font-size: 5rem;
+    font-weight: 650;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    animation: fadeInDown 1s ease-out;
+}
+
+.parallax-subtitle {
+    font-size: 2rem;
+}
+  
+  /* TYPWRITER */
 .typewriter h1 {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid blue; /* The typewriter cursor */
+    border-right: .15em solid indigo; /* The typewriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em; /* Adjust as needed */
@@ -39,7 +91,7 @@ html {
 /* The typewriter cursor effect */
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: blue; }
+    50% { border-color: indigo; }
 }
 
 /* Stop the cursor blinking */
@@ -50,9 +102,185 @@ html {
 .type1 {
 display:flex;
 justify-content: center;
+background-color: transparent;
+}
+
+.welcome{
+    font-size: 38px;
 }
 
 .name1{
 display:flex;
 justify-content: center;
+background-color: transparent;
 }
+
+/* Main Back ground color /////////////////////////////////////////////// */
+
+
+/* Container for all content after parallax */
+/* .backColor {
+    /* background-image: linear-gradient(to top, #000000, indigo, #775ea5, #E6E6FA,#e5e5f8);  */
+    /* background-repeat: no-repeat; */
+    /* padding: 60px 40px; */
+    /* margin: 0; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+/* } */ 
+
+/* white rounded box containing all text */
+/* .content-box {
+    background-color: #fafafaf5;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+    margin: 0 auto;
+} */
+
+
+/* Overiew/bio */
+
+.BioPara{
+    border-radius: 6px;
+    border-color: indigo;
+
+}
+
+.button-link{
+    padding: 14px 40px;
+    border-radius: 4px;
+
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: indigo;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: sans-serif;
+  }
+
+  .button-link:hover {
+    background-color: #775ea5;
+  }
+
+/* ////// over view section  */
+  .bioTitle{
+        color: black;
+        font-size: 40px;
+        text-align: center;
+    }
+  
+  .bio1 {
+    background-color: white;
+    border-radius: 15px;
+    margin-left: 100px;
+    margin-right:100px;
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 18px;
+    line-height: 1.8;
+
+}
+/* ///////////  Coding Journey //////////////////////////////////////////////// -->   */
+
+.Kwk1{
+    background-color: white;
+    border-radius: 15px;
+    margin-left: 100px;
+    margin-right:100px;
+    margin-top: 10px;
+    margin-right:100px;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 18px;
+    line-height: 1.8;
+    
+}
+
+ /* ///////////  Fun Facts //////////////////////////////////////////////// -->   */
+ .FunFacts{
+    background-color: white;
+    border-radius: 15px;
+    margin-left: 100px;
+    margin-right:100px;
+    margin-top: 10px;
+    display:flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.ghibliGif{
+    /* vertical-align: middle; */
+    width: 300px;
+    height: 300px;
+    margin-left: 150px;;
+    border-radius: 50%;
+}
+
+    
+.facts{
+    padding-left: 80px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+/* ///////////  flicks //////////////////////////////////////////////// -->   */
+.flicks{
+    background-color: white;
+    border-radius: 15px;
+    margin-left: 100px;
+    margin-right:100px;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+div.scroll-container {
+    background-color: #1a073a;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
+  div.scroll-container img {
+    padding: 10px;
+  }
+
+  .pictures{
+    height: 450px;
+    width: 450px;
+    object-fit: contain;
+  }
+
+.flicksT1{
+    display: flex;
+  justify-content: center;
+}
+.flicksT2{
+    display: flex;
+    justify-content: center;
+}
+
+.hobbies{
+    font-size: 20px;
+}
+
+
+/* ////////////////////////FOOTER //////////////////// */
+

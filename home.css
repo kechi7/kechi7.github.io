@@ -20,7 +20,7 @@ html {
   }
 /* /////////////////////////////PARALAX///////////////////////////////////////////// */
    /* Parallax section */
-   .parallax {
+   /* .parallax {
     background-image: url("/Users/nkechi7/Documents/GitHub/kechi7.github.io/purpleTrainGif");
     min-height: 800px;
     background-attachment: fixed;
@@ -32,7 +32,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
 /* Overlay for better text readability */
 .parallax::before {

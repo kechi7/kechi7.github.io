@@ -3,7 +3,9 @@ html {
     width: 100%;
     font-family: 'Raleway', sans-serif;
     scroll-behavior: smooth;
+     scroll-behavior: smooth;
   }
+
   
   /* Body with white background */
   body {
@@ -18,6 +20,39 @@ html {
     display:flex;
 
   }
+
+  /* NAV BARR ///////////////////////////////////////// */
+  .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+   background-color: #1a073a;
+  color: white;
+  padding: 10px 20px;
+  /* z-index: 1000;  */
+  /* box-shadow: 0 2px 5px rgba(0,0,0,0.3); */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+ 
+}
+
+.navbar ul li a:hover {
+  color: #0d0446; /* highlight on hover */
+}
 /* /////////////////////////////PARALAX///////////////////////////////////////////// */
     .parallax {
     /* background-image: url("/Users/nkechi7/Documents/GitHub/kechi7.github.io/purpleTrainGif.gif"); */
@@ -114,6 +149,41 @@ justify-content: center;
 background-color: transparent;
 }
 
+/* Enter button styles */
+    .enter-btn {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      background: rgba(255, 255, 255, 0.8);
+      color: black;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .enter-btn:hover {
+      background: white;
+      transform: scale(1.05);
+    }
+
+    /* Fade-out animation */
+    .fade-out {
+      animation: fadeOut 0.8s forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    /* Hide main content initially */
+    #main-content {
+      display: none;
+    }
+  
 /* Main Back ground color /////////////////////////////////////////////// */
 
 
@@ -187,7 +257,27 @@ background-color: transparent;
     padding-right: 40px;
     font-size: 18px;
     line-height: 1.8;
+    display:flex;
+    align-items: center; /* vertically center text with image */
+    justify-content: space-between; /* space between text and image */
+    gap: 20px; /* spacing between text and image */
 
+}
+.pictures1 {
+  max-width: 100%; /* make image responsive */
+  height: auto;
+  border-radius: 10px; /* optional: rounded corners */
+}
+
+.bio1 div {
+  flex: 1; /* make both text and image containers take up equal space */
+}
+
+@media (max-width: 768px) {
+  .bio1 {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 /* ///////////  Coding Journey //////////////////////////////////////////////// -->   */
 
@@ -281,5 +371,62 @@ div.scroll-container {
 }
 
 
-/* ////////////////////////FOOTER //////////////////// */
+/* ////////////////////////Fact Generator //////////////////// */
  
+
+#fact-display {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#new-fact-btn {
+  padding: 8px 16px;
+  font-size: 1rem;
+  border: none;
+  background: rgb(85, 10, 160);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#new-fact-btn:hover {
+  background: rgb(89, 23, 213);
+}
+
+/* ///////////////////// Footer */
+.site-footer {
+  background-color: rgba(34, 34, 34, 0.8); /* 70% opacity */
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+
+.social-icons {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 15px;
+  vertical-align: middle;
+}
+
+.social-icon {
+  width: 36px;       /* Icon size */
+  height: 36px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+  display: block;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.footerNote {
+    font: 60px;
+    margin: 20px;
+}

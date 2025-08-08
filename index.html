@@ -7,10 +7,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <link href="home.css" rel="stylesheet" type="text/css" />
+ <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pVvZ+Pp3HbAw9OE9kUj9dAqz7XW3A3OxkyVnA3XxPvG01gTYgI+Gc/cwBR6LWjvIxABn5F31mR4HtVH3aWq0Ug=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 
 <body>
     <script src="home.js"></script>
+     
+
+
+
 <!-- //////////////////////////PARALLAX SCROLLING///////////////////////-->
 
 <style>
@@ -31,17 +42,28 @@
 
 <!-- //////////////////////////PARALLAX SCROLLING///////////////////////-->
 
-<div class="parallax">
+<div class="parallax" id="intro">
     <div class="parallax-text">
         <h1 class="parallax-title">Hello! I'm Nkechi:)</h1>
         <p class="parallax-subtitle"> /een-kay-chee/</p>
         <div class="typewriter">
             <h1 class = "welcome">Welcome to my tech corner</h1>
         </div>
+         <button class="enter-btn" id="enterBtn">Enter Site</button>
     </div>
 </div>
 
+<script>
+    document.getElementById("enterBtn").addEventListener("click", () => {
+      const intro = document.getElementById("intro");
+      intro.classList.add("fade-out");
 
+      setTimeout(() => {
+        intro.style.display = "none";
+        document.getElementById("main-content").style.display = "block";
+      }, 800); // matches animation time
+    });
+</script>
 
 <!-- <section class="backColor"> -->
     
@@ -54,19 +76,39 @@
                 <h1 class = "welcome">Welcome to my tech corner</h1>
             </div>
         </section> -->
+
+
 <!-- Bio/overview -->
-<section class="bio1">
+ <div id="main-content" style="display:none;">
+    <nav class="navbar">
+  <ul>
+    <li><a href="#intro">Home</a></li>
+    <li><a href="#main-content">About</a></li>
+    <li><a href="#coding-journey">Coding Journey</a></li>
+    <li><a href="#fun-facts">Fun Facts</a></li>
+    <li><a href="#flicks">Photos</a></li>
+  </ul>
+</nav>
+<section class="bio1" id="about">
      <div> 
         <h1 class = "bioTitle">Overview</h1>
          <p class="BioPara">I am an incoming freshman at UC Berkeley as a Computer Science Major, and I plan to minor in policy. I am from Pueblo, a smaller town in southern Colorado, and a first-generation Nigerian-American. I have always had an interest in technology and healthcare; however, I am especially interested in the role of technology in making medical advancements more equitable.</p>
     </div>
+
+    <div>
+      <img class= "pictures1"src="me.jpg" > 
+    </div>
 </section>
 
+
+
+
 <!-- ///////////  KWK Journey //////////////////////////////////////////////// -->  
-<section class="Kwk1">
+
+<section class="Kwk1" id="coding-journey">
     <div> 
         <h1>Coding Journey</h1>
-        <p class="KwkPara">Kode with Klossy was one of my first introductions to the world of coding, as I am a former WebDev and Data Science Scholar. After my experience in the camps, I also collaborated with another KWK alumna in the Congressional App Challenge to create a website that served as a resource hub for marginalized individuals aspiring towards healthcare fields. I loved learning to code in a supportive environment, and I have continued to practice ever since, creating projects on my own and participating in GWC during the summers. The skills I learned from these programs especially fueled my desire to explore the intersections of tech and policy as a means to alleviate racial inequities, which is why I am excited to be a part of the 2025 KWK x BWDC Storytelling Challenge!
+        <p class="KwkPara">Kode with Klossy was one of my first introductions to the world of coding, as I am a former WebDev and Data Science Scholar. After my experience in the camps, I also collaborated with another KWK alumna in the Congressional App Challenge to create a website that served as a resource hub for marginalized individuals aspiring towards healthcare fields. I loved learning to code in a supportive environment, and I have continued to practice ever since, creating projects on my own and participating in GWC during the summers. The skills I learned from these programs especially fueled my desire to explore the intersections of tech and policy as a means to alleviate racial inequities.
         </p>
     </div>
     <div>
@@ -74,13 +116,26 @@
         <a href="https://replit.com/@kechi7/Cancer-Clarity?v=1" class="button-link">Cancer Clarity</a>
         <a href="https://firstinhealth.netlify.app/" class="button-link">First In Health</a>
         <a href="https://replit.com/@kechi7/Project-Perspective?v=1" class="button-link">Project Perspective</a>
+        <a href="https://kechi7.github.io/Final-Project-Demo/" class="button-link"> Between the Lines</a>
     </div>
 </section>
 
 <!-- ///////////  Fun Facts //////////////////////////////////////////////// -->  
-<section class="FunFacts">
+<section class="FunFacts" id="fun-facts">
+<div>
+    <h1>Fun Facts</h1>
+  <p id="fact-display">Click the button to see a random fact!</p>
+  <button id="new-fact-btn">Show Another Fact</button>
+</div>
+
+<div>
+
+</div>
+<div>
     
-    <div class= "facts"> 
+</div>
+
+    <!-- <div class= "facts"> 
         <h1> Fun Facts </h1>
         <ul class= "list">
             <li class="fact1"> I am an only child, through it never really felt that way because I have 16 cousins</li>
@@ -90,14 +145,34 @@
             <li class=" fact5">Arsenal and FC Barcelona are my two favorite football teams</li>
             <li class=" fact6">Orchids are my favorite flower</li>
         </ul>
-    </div>
+    </div> -->
+
     <div>
         <img class="ghibliGif" src=ghibliGif.gif alt="Example image">
     </div>
+<script>
+  const facts = [
+    "I am an only child, but I have 16 cousins.",
+    "I love animations: Attack on Titan and Ghibli films are my all-time favorite.",
+    "I am half Igbo and half Itsekiri.",
+    "I have been competitively figure skating since I was 5 years old.",
+    "Arsenal and FC Barcelona are my two favorite football teams.",
+    "Orchids are my favorite flower."
+  ];
+
+  const factDisplay = document.getElementById("fact-display");
+  const factBtn = document.getElementById("new-fact-btn");
+
+  factBtn.addEventListener("click", () => {
+    const randomIndex = Math.floor(Math.random() * facts.length);
+    factDisplay.textContent = facts[randomIndex];
+  });
+</script>
 </section>
 
+
 <!-- ///////////  Flicks //////////////////////////////////////////////// -->  
-<section class= "flicks">
+<section class= "flicks" id="flicks">
 <div class= flicksT1>
     <h1> ... that was alot of words. Get to know me through some photos!</h1>
 </div>
@@ -106,7 +181,7 @@
 </div>
 
 <h1> Traveling</h1>
-<p class= "hobbies" > London is my favority city to visit, though I am biased becuase most my family lives there, and I have been exploring California more since I am moving there for school.</p>
+<p class= "hobbies" > London is my favority city to visit, though I am biased becuase most my family lives there. Recently, I have been exploring California more.</p>
 <div class="scroll-container">
     <img class= "pictures"src="London.jpeg" >
     <img class= "pictures"src="smBeach.jpeg" >
@@ -115,7 +190,7 @@
 </div>
 
 <h1> Hobbies </h1>
-<p class= "hobbies" > In my free time I am probably starting an elaborate new crochet project, painting, or training. I rran track and field for 4 years, but skating will always be my favorite.</p>
+<p class= "hobbies" > In my free time I am probably starting an elaborate new crochet project, painting, or training. I ran track and field for 4 years, but skating will always be my preffered sport.</p>
 <div class="scroll-container">
     <img class= "pictures"src="flip.jpeg.gif" >
     <img class= "pictures"src="crochetflowers.jpeg" >
@@ -127,7 +202,7 @@
 <h1> Me! </h1>
 <p class= "hobbies" > These are some pics of me with family and friends</p>
 <div class="scroll-container">
-    <img class= "pictures"src="me.jpg" >
+    <!-- <img class= "pictures"src="me.jpg" > -->
     <img class= "pictures"src="cousinsInc.jpeg" >
     <img class= "pictures"src="cousins.jpeg" >
     <img class= "pictures"src="mugME.jpeg" >
@@ -137,6 +212,27 @@
 </section>
 
 
+
+
+<footer class="site-footer">
+    <div class= "footerNote">
+        Stay in touch!
+    </div>
+  <div class="social-icons">
+    <a href="https://instagram.com/normalize_nkechi" target="_blank" aria-label="Instagram">
+      <img src="/Users/nkechi7/Documents/GitHub/kechi7.github.io/footericons/instaicon.webp" alt="Instagram" class="social-icon" />
+    </a>
+    <a href="https://github.com/kechi7" target="_blank" aria-label="GitHub">
+      <img src="/Users/nkechi7/Documents/GitHub/kechi7.github.io/footericons/GitHub logo.png" alt="GitHub" class="social-icon" />
+    </a>
+    <a href="https://linkedin.com/in/nkechi-onyejekwe" target="_blank" aria-label="LinkedIn">
+      <img src="/Users/nkechi7/Documents/GitHub/kechi7.github.io/footericons/linkedinLogo.png" alt="LinkedIn" class="social-icon" />
+    </a>
+  </div>
+  <p> 2025 Nkechi Onyejekwe. All rights reserved.</p>
+</footer>
+
+</div>
 
 
 
